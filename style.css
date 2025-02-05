@@ -82,7 +82,12 @@ p {
 }
 #header .header {
   min-height: 8vh;
-  background-color: #59463f;
+  background-color: rgba(
+    89,
+    70,
+    63,
+    0.8
+  ); /* 80% de opacidade (20% de transparência) */
   transition: 0.3s ease background-color;
 }
 #header .nav-bar {
@@ -248,7 +253,7 @@ p {
   left: 0;
   height: 100%;
   width: 0;
-  background-color: #1a0e0b;
+  background-color: rgba(26, 14, 11, 0.5);
   animation: text_reveal_box 1s ease;
   animation-delay: 0.5s;
 }
@@ -261,81 +266,7 @@ p {
 #hero h1:nth-child(3) span {
   animation-delay: 2.5s;
 }
-
 /* End Hero Section */
-
-/* Projects section */
-#projects .projects {
-  flex-direction: column;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 100px 0;
-}
-#projects .projects-header h1 {
-  margin-bottom: 50px;
-}
-#projects .all-projects {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-#projects .project-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 80%;
-  margin: 20px auto;
-  overflow: hidden;
-  border-radius: 10px;
-}
-#projects .project-info {
-  padding: 30px;
-  flex-basis: 50%;
-  height: 100%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
-  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-  color: white;
-}
-#projects .project-info h1 {
-  font-size: 4rem;
-  font-weight: 500;
-}
-#projects .project-info h2 {
-  font-size: 1.8rem;
-  font-weight: 500;
-  margin-top: 10px;
-}
-#projects .project-info p {
-  color: white;
-}
-#projects .project-img {
-  flex-basis: 50%;
-  height: 300px;
-  overflow: hidden;
-  position: relative;
-}
-#projects .project-img:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-  opacity: 0.7;
-}
-#projects .project-img img {
-  transition: 0.3s ease transform;
-}
-#projects .project-item:hover .project-img img {
-  transform: scale(1.1);
-}
-/* End Projects section */
 
 /* About Section */
 #about .about {
@@ -360,12 +291,6 @@ p {
 }
 #about .col-right p {
   margin-bottom: 20px;
-}
-#about .col-right .cta {
-  color: black;
-  margin-bottom: 50px;
-  padding: 10px 20px;
-  font-size: 2rem;
 }
 #about .col-left .about-img {
   height: 100%;
@@ -432,7 +357,7 @@ p {
 
 /* Footer */
 #footer {
-  background-image: linear-gradient(60deg, #9c8573 0%, #5a4940 100%);
+  background-image: linear-gradient(60deg, #9e4c0e 0%, #5a4940 100%);
 }
 #footer .footer {
   min-height: 200px;
@@ -448,10 +373,7 @@ p {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-#footer .social-icon {
-  display: flex;
-  margin-bottom: 30px;
-}
+
 #footer .social-item {
   height: 50px;
   width: 50px;
@@ -572,6 +494,35 @@ p {
     text-align: left;
   }
   /* End About */
+  /* Seção de Avaliações */
+  #reviews {
+    padding: 50px 0;
+    background-color: #f9f9f9; /* Cor de fundo */
+    text-align: center;
+  }
+
+  #reviews .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    display: block; /* Garante que o título ocupe toda a largura */
+  }
+
+  #reviews .reviews-content {
+    display: block; /* Força a quebra de linha */
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  /* Ajustes para o widget */
+  .elfsight-app-96144cec-df72-4a9c-9aa5-3eb70b83d9ac {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: block; /* Garante que o widget não fique ao lado */
+    clear: both; /* Previne que flutuações afetem o posicionamento */
+  }
+
+  /* End Seção de Avaliações */
 
   /* contact */
   #contact .contact {
@@ -588,27 +539,6 @@ p {
     flex-direction: row;
     justify-content: space-evenly;
     margin: 0;
-  }
-
-  #contact .contact-item {
-    width: 25%; /* Reduzido para itens menores */
-    margin: 0;
-    flex-direction: row;
-  }
-
-  #contact .contact-item .icon {
-    height: 80px; /* Reduzido para tornar os ícones menores */
-    width: 80px; /* Reduzido para tornar os ícones menores */
-  }
-
-  #contact .contact-item .icon img {
-    object-fit: contain;
-  }
-
-  #contact .contact-item .contact-info {
-    width: 100%;
-    text-align: left;
-    padding-left: 10px; /* Reduzido para ajustar o espaçamento */
   }
 }
 /* End Media Query For Tablet */
