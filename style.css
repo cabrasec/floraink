@@ -403,6 +403,20 @@ p {
   color: white;
   font-size: 1.3rem;
 }
+#footer p:last-child {
+  font-style: italic;
+  text-align: center;
+}
+.footer-link {
+  color: #4e2306; /* Cor laranja, altere conforme desejado */
+  text-decoration: none; /* Remove o sublinhado, se preferir */
+}
+
+.footer-link:hover {
+  color: #883520; /* Cor ao passar o mouse (opcional) */
+}
+
+
 /* End Footer */
 
 /* Keyframes */
