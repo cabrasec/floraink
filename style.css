@@ -88,7 +88,6 @@ p {
 #header .nav-list ul {
   list-style: none;
   position: fixed; /* Torna o menu fixo */
-  background-color: #59463f;
   width: 300px; /* Define uma largura fixa */
   height: 100vh;
   right: -100%; /* Oculta o menu inicialmente */
